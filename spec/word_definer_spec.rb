@@ -20,4 +20,13 @@ describe('Word') do
       expect(third_word.title).to(eq("toy"))
     end
   end
+  describe('.add_word') do
+    it('stores all words in an array') do
+      first_word = Word.new({:title => "happy"})
+      second_word = Word.new({:title => "bubble"})
+      third_word = Word.new({:title => "toy"})
+      binding.pry
+      expect(Word.all).to(eq("happy"))
+    end
+  end
 end
