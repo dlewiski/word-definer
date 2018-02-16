@@ -18,4 +18,9 @@ class Word
   def add_word
     @word_list[@title] = @list_of_definitions
   end
+
+  def add_definition(definition)
+    @list_of_definitions.push(definition)
+    @wordlist[@title] = @list_of_definitions
+  end
 end

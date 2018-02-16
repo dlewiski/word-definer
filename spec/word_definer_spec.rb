@@ -39,4 +39,10 @@ describe('Word') do
     first_word.add_word
     expect(first_word.title).to(eq("sad"))
   end
+
+  it('adds another definition to a word') do
+    first_word = Word.new({:title => "sad"})
+    first_word.add_word
+    expect(first_word.add_definition("makes you feel bad")).to(eq(["makes you feel bad"]))
+  end
 end
