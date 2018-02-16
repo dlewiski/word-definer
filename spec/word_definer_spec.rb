@@ -7,7 +7,14 @@ describe('Word') do
   describe('#initialize') do
     it('generates a word') do
       new_word = Word.new({:title => "happy"})
-      expect(new_word.title).to(eq("potato"))
+      expect(new_word.title).to(eq("happy"))
     end
   end
+  describe('#make_word') do
+    it('generates a list of words') do
+      new_word = Word.new({:title => "happy"})
+      expect(new_word.title).to(eq("happy"))
+    end
+  end
+
 end

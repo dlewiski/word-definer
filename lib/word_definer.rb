@@ -7,4 +7,7 @@ class Word
     # @definition = attributes.fetch(:definitions)
     # @parts_of_speech = attributes.fetch(:parts_of_speech)
   end
+
+  def self.make_word
+    
 end
