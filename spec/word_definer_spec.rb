@@ -32,6 +32,6 @@ describe('Word') do
     first_word.add_word("happy")
     first_word.add_definition("makes you feel good")
     first_word.add_definition("is a type of feeling")
-    expect(first_word.define).to(eq(["makes you feel bad", ]))
+    expect(first_word.define).to(eq(["makes you feel good", "is a type of feeling"]))
   end
 end
