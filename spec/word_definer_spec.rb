@@ -5,45 +5,32 @@ require 'pry'
 
 
 describe('Word') do
-  # describe('#initialize') do
-  #   it('generates a word') do
-  #     new_word = Word.new({:title => "happy"})
-  #     expect(new_word.title).to(eq("happy"))
-  #   end
-  #
-  #   it('generates a list of words') do
-  #     first_word = Word.new({:title => "happy"})
-  #     second_word = Word.new({:title => "bubble"})
-  #     third_word = Word.new({:title => "toy"})
-  #     expect(first_word.title).to(eq("happy"))
-  #     expect(second_word.title).to(eq("bubble"))
-  #     expect(third_word.title).to(eq("toy"))
-  #   end
-  # end
-  # describe('.add_word') do
-  #   it('stores all words in an array') do
-  #     first_word = Word.new({:title => "happy"})
-  #     second_word = Word.new({:title => "bubble"})
-  #     third_word = Word.new({:title => "toy"})
-  #     binding.pry
-  #     expect(Word.all).to(eq("happy"))
-  #   end
-  # end
-  it('returns a definition from an array') do
-    first_word = Word.new({:title => "happy"})
-    expect(first_word.define("happy")).to(eq(["makes you feel good"]))
+  it('returns a word') do
+    first_word = Word.new
+    first_word.add_word("happy")
+    expect(first_word.show_word).to(eq("happy"))
+  end
+
+  it('returns a definition from a word') do
+    first_word = Word.new
+    first_word.add_word("happy")
+    first_word.add_definition("makes you feel good")
+    expect(first_word.define).to(eq(["makes you feel good"]))
   end
 
   it('adds another word to the list') do
-    first_word = Word.new({:title => "sad"})
-    first_word.add_word
-    expect(first_word.title).to(eq("sad"))
+    first_word = Word.new
+    first_word.add_word("happy")
+    second_word = Word.new
+    second_word.add_word("sad")
+    expect(first_word.show_word).to(eq("happy"))
+    expect(second_word.show_word).to(eq("sad"))
   end
-
-  it('adds another definition to a word') do
-    first_word = Word.new({:title => "sad"})
-
-    binding.pry
-    expect(first_word.add_definition("makes you feel bad")).to(eq(["makes you feel bad"]))
-  end
+  #
+  # it('adds another definition to a word') do
+  #   first_word = Word.new({:title => "sad"})
+  #
+  #   binding.pry
+  #   expect(first_word.add_definition("makes you feel bad")).to(eq(["makes you feel bad"]))
+  # end
 end

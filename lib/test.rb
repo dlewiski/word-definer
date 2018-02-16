@@ -1,26 +1,27 @@
 class Word
 
-  attr_accessor :title, :definition, :list_of_definitions
-  attr_reader :parts_of_speech
+  attr_accessor :word, :title, :definition
 
-  def initialize(attributes)
-    @title = attributes.fetch(:title)
-    @word_list = { "happy" => ["makes you feel good"], "bubble" => ["round ball filled with air that floats"] }
-    # @definition = attributes.fetch(:definitions)
-    @list_of_definitions = []
+  def initialize
+    @word_list = [{"title" => "happy", "definitions" => ["makes you feel good"]}, {"title" => "bubble", "definitions" => ["round ball filled with air that floats"]}]
+    @word = {"title" => "", "definitions" => []}
+    @list_of_definitions = Array.new
   #   @parts_of_speech = attributes.fetch(:parts_of_speech)
   end
 
-  def define(title)
-    @word_list.fetch(title)
+  def show_word
+    @word.fetch("title")
   end
 
-  def add_word
-    @word_list[@title] = @list_of_definitions
+  def define
+    @word.fetch("definitions")
+  end
+
+  def add_word(title)
+    @word["title"] = title
   end
 
   def add_definition(definition)
-    @list_of_definitions.push(definition)
-    @wordlist[@title] = @list_of_definitions
+    @word["definitions"].push(definition)
   end
 end
