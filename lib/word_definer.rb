@@ -10,4 +10,5 @@ class Word
 
   def self.make_word
 
+  end
 end

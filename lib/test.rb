@@ -6,17 +6,20 @@ class Word
 
   def initialize(attributes)
     @title = attributes.fetch(:title)
-    @definition = attributes.fetch(:definitions)
-    @parts_of_speech = attributes.fetch(:parts_of_speech)
+  #   @definition = attributes.fetch(:definitions)
+  #   @parts_of_speech = attributes.fetch(:parts_of_speech)
   end
 
-  def self.make_word(title)
+  def self.make_word=(title)
     @@word_list = @@word_list.push(title)
+  end
+
+  def self.all()
   end
 end
 
-puts "enter a word"
-
-title = gets.chomp
-
-puts Word.make_word(title)
+# puts "enter a word"
+#
+# title = gets.chomp
+#
+# puts Word.make_word(title)
