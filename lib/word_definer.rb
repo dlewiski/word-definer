@@ -1,14 +1,18 @@
 class Word
-  attr_accessor :title, :definition
-  attr_reader :parts_of_speech
+  attr_accessor :title
+  # attr_reader :parts_of_speech
 
   def initialize(attributes)
     @title = attributes.fetch(:title)
-    # @definition = attributes.fetch(:definitions)
+    # @definitions = attributes.fetch(:definitions)
     # @parts_of_speech = attributes.fetch(:parts_of_speech)
   end
 
   def self.make_word
 
   end
+end
+
+class Definition
+
 end
