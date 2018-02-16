@@ -31,11 +31,12 @@ describe('Word') do
   # end
   it('returns a definition from an array') do
     first_word = Word.new({:title => "happy"})
-    expect(first_word.word_definition("happy")).to(eq(["makes you feel good"]))
+    expect(first_word.define("happy")).to(eq(["makes you feel good"]))
   end
 
   it('adds another word to the list') do
     first_word = Word.new({:title => "sad"})
-    expect(first_word.define("sad")).to(eq(["makes you feel bad"]))
+    first_word.add_word
+    expect(first_word.title).to(eq("sad"))
   end
 end
