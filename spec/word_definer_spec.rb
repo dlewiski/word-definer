@@ -5,8 +5,9 @@ require 'pry'
 
 describe('Word') do
   describe('#initialize') do
-    it('generate a word') do
+    it('generates a word') do
       new_word = Word.new({:title => "happy"})
       expect(new_word.title).to(eq("potato"))
     end
+  end
 end

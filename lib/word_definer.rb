@@ -4,6 +4,7 @@ class Word
 
   def initialize(attributes)
     @title = attributes.fetch(:title)
-    @definition = attributes.fetch(:definitions)
-    @parts_of_speech = attributes.fetch(:parts_of_speech)
+    # @definition = attributes.fetch(:definitions)
+    # @parts_of_speech = attributes.fetch(:parts_of_speech)
+  end
 end
