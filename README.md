@@ -12,7 +12,18 @@
 
 #### Back-end
 
-1. 
+1. Return a list of words.
+  * _example input:_
+  * _example output: "happy, bubble, toy, cat, computer"_
+2. Add a word to the list.
+  * _example input: "sun"_
+  * _example output: "happy, bubble, toy, cat, computer, sun"_
+3. Return a word with a definition.
+  * _example input: "happy"_
+  * _example output: "happy: makes you feel good"_
+4. Add a definition to the word.
+  * _example input: "a feeling"_
+  * _example output: "happy: makes you feel good; a feeling"_
 
 #### Front-end
 
