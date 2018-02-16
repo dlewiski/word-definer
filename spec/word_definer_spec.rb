@@ -26,11 +26,12 @@ describe('Word') do
     expect(first_word.show_word).to(eq("happy"))
     expect(second_word.show_word).to(eq("sad"))
   end
-  #
-  # it('adds another definition to a word') do
-  #   first_word = Word.new({:title => "sad"})
-  #
-  #   binding.pry
-  #   expect(first_word.add_definition("makes you feel bad")).to(eq(["makes you feel bad"]))
-  # end
+
+  it('adds another definition to a word') do
+    first_word = Word.new
+    first_word.add_word("happy")
+    first_word.add_definition("makes you feel good")
+    first_word.add_definition("is a type of feeling")
+    expect(first_word.define).to(eq(["makes you feel bad", ]))
+  end
 end
