@@ -42,7 +42,8 @@ describe('Word') do
 
   it('adds another definition to a word') do
     first_word = Word.new({:title => "sad"})
-    first_word.add_word
+
+    binding.pry
     expect(first_word.add_definition("makes you feel bad")).to(eq(["makes you feel bad"]))
   end
 end

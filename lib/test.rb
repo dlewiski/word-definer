@@ -1,6 +1,6 @@
 class Word
 
-  attr_accessor :title, :definition
+  attr_accessor :title, :definition, :list_of_definitions
   attr_reader :parts_of_speech
 
   def initialize(attributes)
