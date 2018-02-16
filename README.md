@@ -27,13 +27,19 @@
 
 #### Front-end
 
+1. List all words on get page
+
+2. Add a word to the list via a form
+
+3. Click on a word to see definition
+
+4. Once a word has been clicked, add a definition via a form
 
 
-1. Update and render gallows
 
 ## Setup/Installation Requirements
 
-Word definer is viewable online at http://zenscape.us
+Word definer is viewable online at {input Heroku link}
 
 To view the source code:
 1. visit
