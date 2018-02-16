@@ -5,11 +5,14 @@ also_reload('lib/**/*.rb')
 require './lib/word_definer'
 
 get('/') do
-
-  erb(:definition)
+  @first_words = Word.new
+  @first_words.add_word("happy")
+  erb(:word_list)
 end
 
 post('/') do
-
-  erb(:definition)
+  @first_words = Word.new
+  word = params("word")
+  @first_words.add_word(word)
+  erb(:word_list)
 end

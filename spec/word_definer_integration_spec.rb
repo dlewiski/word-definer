@@ -1,13 +1,13 @@
-# require 'capybara/rspec'
-# require './app'
-# Capybara.app = Sinatra::Application
-# set(:show_exceptions, false)
-#
-# describe('game input', {:type => :feature}) do
-#   it('take in a letter and display it in both array outputs') do
-#     visit('/')
-#     fill_in('guess', :with => 'r')
-#     click_button('Submit letter')
-#     expect(page).to have_content('r')
-#   end
-# end
+require 'capybara/rspec'
+require './app'
+Capybara.app = Sinatra::Application
+set(:show_exceptions, false)
+
+describe('word list', {:type => :feature}) do
+  it('display a list of words') do
+    visit('/')
+    fill_in('word', :with => 'hello')
+    click_button('Add word!')
+    expect(page).to have_content('hello')
+  end
+end

@@ -1,6 +1,5 @@
 require 'rspec'
-# require 'word_definer'
-require 'test'
+require 'word_definer'
 require 'pry'
 
 

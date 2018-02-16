@@ -1,22 +1,26 @@
 class Word
 
-  @@words = []
-  attr_accessor :title
-  # attr_reader :parts_of_speech
+  attr_accessor :word
 
-  def initialize(attributes)
-    @@words << self
-    @title = attributes.fetch(:title)
-
-    # @definitions = attributes.fetch(:definitions)
-    # @parts_of_speech = attributes.fetch(:parts_of_speech)
+  def initialize
+    @word_list = [{"title" => "happy", "definitions" => ["makes you feel good"]}, {"title" => "bubble", "definitions" => ["round ball filled with air that floats"]}]
+    @word = {"title" => "", "definitions" => []}
+  #   @parts_of_speech = attributes.fetch(:parts_of_speech)
   end
 
-  def self.all
-    @@words.inspect
+  def show_word
+    @word.fetch("title")
   end
 
-  def self.show_word
-    @@word[1].title
+  def define
+    @word.fetch("definitions")
+  end
+
+  def add_word(title)
+    @word["title"] = title
+  end
+
+  def add_definition(definition)
+    @word["definitions"].push(definition)
   end
 end
