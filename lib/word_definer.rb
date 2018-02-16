@@ -15,4 +15,8 @@ class Word
   def self.all
     @@words.inspect
   end
+
+  def self.show_word
+    @@word[1].title
+  end
 end
