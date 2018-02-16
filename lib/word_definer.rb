@@ -9,5 +9,5 @@ class Word
   end
 
   def self.make_word
-    
+
 end
