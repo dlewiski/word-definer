@@ -5,12 +5,17 @@ class Word
 
   def initialize(attributes)
     @title = attributes.fetch(:title)
-    @word_list = { "happy" => ["makes you feel good"], "bubble" => ["round ball filled with air that floats"] }
-  #   @definition = attributes.fetch(:definitions)
+    @word_list = { "happy" => @list_of_definitions, "bubble" => ["round ball filled with air that floats"] }
+    @definition = attributes.fetch(:definitions)
+    @list_of_definitions = []
   #   @parts_of_speech = attributes.fetch(:parts_of_speech)
   end
 
-  def word_definition(title)
+  def define(title)
     @word_list.fetch(title)
+  end
+
+  def add_word(title)
+    @word_list[title] = @list_of_definitions
   end
 end
