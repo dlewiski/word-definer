@@ -12,7 +12,7 @@ end
 
 post('/') do
   @first_words = Word.new
-  word = params("word")
+  word = params["word"]
   @first_words.add_word(word)
   erb(:word_list)
 end
