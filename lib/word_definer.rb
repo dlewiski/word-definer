@@ -1,10 +1,12 @@
 class Word
 
+@@word_list = []
+
   attr_accessor :word
 
-  def initialize
-    @word_list = [{"title" => "happy", "definitions" => ["makes you feel good"]}, {"title" => "bubble", "definitions" => ["round ball filled with air that floats"]}]
-    @word = {"title" => "", "definitions" => []}
+  def initialize (word)
+    @word = word
+    @definitions = []
   #   @parts_of_speech = attributes.fetch(:parts_of_speech)
   end
 
