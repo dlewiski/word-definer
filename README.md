@@ -1,4 +1,4 @@
-# Hangman
+# Word Definer
 
 #### A web application to help kids learn definitions of words
 
