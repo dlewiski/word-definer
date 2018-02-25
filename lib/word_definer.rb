@@ -21,6 +21,10 @@ class Word
     @definitions.push(definition)
   end
 
+  def ==(other_word)
+    (self.word()).== (other_word.word())
+  end
+
   def self.find (criteria)
     id = criteria
     @@word_list.each do |word|

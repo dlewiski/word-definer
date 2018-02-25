@@ -35,9 +35,11 @@ describe('Word') do
     it('finds a particular word using its id') do
       word1 = Word.new("happy")
       word1.add_definition("makes you feel good")
-      word1.add_definition("a feeling")
+      word2 = Word.new("cat")
+      word2.add_definition("furry creature that meows")
       word1.save_word
-      expect(word1.definitions()).to(eq(["makes you feel good", "a feeling"]))
+      word2.save_word
+      expect(Word.find(1)).to(eq(word1))
     end
   end
 
