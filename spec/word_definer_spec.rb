@@ -31,4 +31,14 @@ describe('Word') do
     end
   end
 
+  describe('.find') do
+    it('finds a particular word using its id') do
+      word1 = Word.new("happy")
+      word1.add_definition("makes you feel good")
+      word1.add_definition("a feeling")
+      word1.save_word
+      expect(word1.definitions()).to(eq(["makes you feel good", "a feeling"]))
+    end
+  end
+
 end
