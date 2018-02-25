@@ -11,3 +11,12 @@ describe('word list', {:type => :feature}) do
     expect(page).to have_content('happy')
   end
 end
+
+describe('word list', {:type => :feature}) do
+  it('display a list of words') do
+    visit('/')
+    fill_in('word', :with => 'happy')
+    click_button('Add word!')
+    expect(page).to have_content('happy')
+  end
+end

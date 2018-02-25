@@ -17,6 +17,10 @@ class Word
     @@word_list
   end
 
+  def self.clear
+    @@word_list = []
+  end
+
   def add_definition (definition)
     @definitions.push(definition)
   end
@@ -26,9 +30,9 @@ class Word
   end
 
   def self.find (criteria)
-    id = criteria
+    word_title = criteria
     @@word_list.each do |word|
-      if id == word.id
+      if word_title == word.word
         return word
       end
     end

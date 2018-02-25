@@ -6,10 +6,10 @@ require 'pry'
 describe('Word') do
   describe('#save_word') do
     it('saves a word to an array') do
+      Word.clear
       word1 = Word.new("happy")
       word1.save_word
-      # changed this spec to work with first integration spec
-      expect(Word.all).to(eq([word1, word1]))
+      expect(Word.all).to(eq([word1]))
     end
   end
 
@@ -34,13 +34,14 @@ describe('Word') do
 
   describe('.find') do
     it('finds a particular word using its id') do
+      Word.clear
       word1 = Word.new("happy")
       word1.add_definition("makes you feel good")
       word2 = Word.new("cat")
       word2.add_definition("furry creature that meows")
       word1.save_word
       word2.save_word
-      expect(Word.find(1)).to(eq(word1))
+      expect(Word.find("happy")).to(eq(word1))
     end
   end
 end
