@@ -42,5 +42,4 @@ describe('Word') do
       expect(Word.find(1)).to(eq(word1))
     end
   end
-
 end

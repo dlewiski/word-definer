@@ -1,7 +1,10 @@
 <h3 action="/">Click on a word to see it's definition!</h3>
 
-<%= @first_words.show_word %>
+<% @words.each do |word| %>
+  <h4><a href="/definitions/<%word.id%>"><%=word.word%></h4>
+<%end%>
 
+<h3>Add a new word to your list!</h3>
 <form action="/" method="post">
   <div class="form-group">
     <label for="word">Enter a new word</label>
@@ -9,5 +12,3 @@
   </div>
   <button type="submit" class="btn btn-primary">Add word!</button>
 </form><br>
-
-  <%= @first_words.show_word %>

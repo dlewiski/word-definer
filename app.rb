@@ -5,8 +5,13 @@ also_reload('lib/**/*.rb')
 require './lib/word_definer'
 
 get('/') do
-  @first_words = Word.new
-  @first_words.add_word("happy")
+  word1 = Word.new("happy")
+  word2 = Word.new("cat")
+  word3 = Word.new("dog")
+  word1.save_word
+  word2.save_word
+  word3.save_word
+  @words = Word.all()
   erb(:word_list)
 end
 
