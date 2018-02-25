@@ -39,7 +39,7 @@ This application allows the user to enter a word along with a definition. The us
 
 ## Setup/Installation Requirements
 
-Word definer is viewable online at {input Heroku link}
+Word definer is viewable online at https://murmuring-dawn-84684.herokuapp.com/
 
 To view the source code:
 1. visit
