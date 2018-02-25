@@ -7,7 +7,7 @@ describe('Word') do
   describe('#save_word') do
     it('saves a word to an array') do
       word1 = Word.new("happy")
-      word1.save_word(word1)
+      word1.save_word
       expect(Word.all).to(eq([word1]))
     end
   end

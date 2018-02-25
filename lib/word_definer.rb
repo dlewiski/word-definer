@@ -7,8 +7,8 @@ class Word
     @definitions = []
   end
 
-  def save_word (word)
-    @@word_list.push(word)
+  def save_word
+    @@word_list.push(self)
   end
 
   def self.all
@@ -18,17 +18,4 @@ class Word
   def add_definition (definition)
     @definitions.push(definition)
   end
-
-
-  # def define
-  #   @word.fetch("definitions")
-  # end
-  #
-  # def add_word(title)
-  #   @word["title"] = title
-  # end
-  #
-  # def add_definition(definition)
-  #   @word["definitions"].push(definition)
-  # end
 end
