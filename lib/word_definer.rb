@@ -1,7 +1,8 @@
 class Word
+  @@word_list = []
+
   attr_accessor :word, :definitions
   attr_reader :id
-  @@word_list = []
 
   def initialize (word)
     @word = word

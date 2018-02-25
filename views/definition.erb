@@ -1,13 +1,14 @@
-
 <h3><%=@title%> definition:</h3>
-<%@definitions.each do |def|%>
-  <h4><%=def%></h4>
+<%@definitions.each do |definition|%>
+ <h4><%=definition%></h4>
 <%end%>
 
-<form action="/" method="post">
+<form action="/definition/<%=@title%>" method="post">
   <div class="form-group">
-    <label for="definition">New Definition</label>
+    <label for="definition">Fill out the form to add another definition</label>
     <input id="definition" name="definition" class="form-control" type="text">
   </div>
   <button type="submit" class="btn btn-primary">Submit Definition</button>
 </form>
+
+<a href="/">Click here to return to your word list</a>

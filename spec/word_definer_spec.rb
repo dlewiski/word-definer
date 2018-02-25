@@ -33,7 +33,7 @@ describe('Word') do
   end
 
   describe('.find') do
-    it('finds a particular word using its id') do
+    it('finds a particular word using its title') do
       Word.clear
       word1 = Word.new("happy")
       word1.add_definition("makes you feel good")

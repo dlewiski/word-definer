@@ -18,9 +18,16 @@ post('/') do
 end
 
 get('/definition/:word') do
-  binding.pry
   word_object = Word.find(params[:word])
-  @definitions = word_object.definitions
   @title = word_object.word
+  @definitions = word_object.definitions
+  erb(:definition)
+end
+
+post('/definition/:word') do
+  word_object = Word.find(params[:word])
+  word_object.add_definition(params[:definition])
+  @title = word_object.word
+  @definitions = word_object.definitions
   erb(:definition)
 end
