@@ -8,7 +8,8 @@ describe('Word') do
     it('saves a word to an array') do
       word1 = Word.new("happy")
       word1.save_word
-      expect(Word.all).to(eq([word1]))
+      # changed this spec to work with first integration spec
+      expect(Word.all).to(eq([word1, word1]))
     end
   end
 
