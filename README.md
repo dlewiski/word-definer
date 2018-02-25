@@ -6,7 +6,7 @@
 
 ## Description
 
-{Write Description}
+This application allows the user to enter a word along with a definition. The user can then click on the word to add additional definitions. The list of all the words is displayed on the homepage.
 
 ## Specs
 
@@ -48,7 +48,7 @@ To view the source code:
 
 ## Technologies Used
 
-{which ones?}
+Ruby and the following gems: Sinatra, Capybara, Rspec, Pry
 
 ## License
 
